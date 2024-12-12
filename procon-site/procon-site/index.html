@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小山高専プロコンプロジェクト</title>
+    <meta name="description" content="こんにちは。小山高専プロコンプロジェクトです。高専機構が主催する高専プロコンの優勝を目指して活動しています。" />
+    <link rel="stylesheet" href="./src/css/index.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a class="logo__link" href="#home">小山高専プロコン</a>
+        </div>
+        <button class="menu" id="js-menu" onclick="clickMenu();">
+            <img class="menu__icon" src="./src/image/menu.png" alt="">
+        </button>
+        <nav class="global js-global">
+            <ul class="global__list">
+                <li class="global__item global__item--none"><a class="global__link" href="#home" onclick="clickItem();">HOME</a></li>
+                <li class="global__item"><a class="global__link" href="#about" onclick="clickItem();">ABOUT</a></li>
+                <li class="global__item"><a class="global__link" href="#result" onclick="clickItem();">RESULT</a></li>
+                <li class="global__item"><a class="global__link" href="#event" onclick="clickItem();">EVENT</a></li>
+                <li class="global__item"><a class="global__link" href="#contact" onclick="clickItem();">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <section class="home" id="home">
+            <div class="home__inner">
+                <h1 class="home__title">プロコンプロジェクト</h1>
+            </div>
+        </section>
+        <section class="about" id="about">
+            <h2 class="about__title">ABOUT</h2>
+            <div class="about__container">
+                <p class="about__sentence">高専プロコンの優勝を目指すために活動している有志団体です。</p>
+                <ul class="about__list">
+                    <li class="about__item">・メンバー：約５０名</li>
+                    <li class="about__item">・活動場所：イノベーション企画室, イノベーションエリア</li>
+                </ul>
+            </div>
+        </section>
+        <section class="result" id="result">
+            <h2 class="result__title">RESULT</h2>
+            <div class="result__container">
+                    <h3 class="result__year">第34回福井大会(2023)</h3>
+                    <ul class="result__list">
+                        <li class="result__item">・自由部門：「服薬守るくん」―チームラボ企業賞</li>
+                    </ul>
+                    <h3 class="result__year">第33回群馬大会(2022)</h3>
+                    <ul class="result__list">
+                        <li class="result__item">・自由部門：「Waking Helper」―特別賞</li>
+                    </ul>
+                    <h3 class="result__year">第32回秋田大会(2021)</h3>
+                    <ul class="result__list">
+                        <li class="result__item">・自由部門：「翻訳展開！！」―チームラボ企業賞</li>
+                        <li class="result__item">・課題部門：「KANJO線」―シーエーシー企業賞</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="event" id="event">
+            <h2 class="event__title">EVENT</h2>
+            <div class="event__container">
+                    <ul class="event__list">
+                        <li class="event__item">オープンキャンパス：7/27(土)</li>
+                        <li class="event__item">工陵祭：11/3(日), 11/4(月)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="contact" id="contact">
+            <h2 class="contact__title">CONTACT</h2>
+            <div class="contact__container">
+                    <ul class="contact__list">
+                        <li class="contact__item">〒323-0806<br>栃木県小山市大字中久喜771番地</li>
+                        <li class="contact__item">TEL：0285-20-2100</li>
+                        <li class="contact__item">FAX：0285-20-2880</li>
+                        <li class="contact__item">DM：<a class="contact__link" href="https://twitter.com/procon_oyama">@procon_oyama</a>(X)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <small class="copyright">&copy;&nbsp;NIT, Oyama College Procon-Project</small>
+    </footer>
+
+    <script src="./src/js/main.js"></script>
+</body>
+</html>

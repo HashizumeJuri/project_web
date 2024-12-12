@@ -1,0 +1,362 @@
+@charset "utf-8";
+
+@import url(./common/destyle.css);
+
+@font-face {
+    font-family: "NotoSansJP";
+    src: url(../font/NotoSansJP-VariableFont_wght.ttf);
+}
+
+body {
+    background: black;
+    font-size: 16px;
+    height: 100svh;
+    width: 100%;
+}
+
+.header {
+    background: black;
+    display: flex;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    .logo {
+        align-items: center;
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        width: 150px;
+        @media screen and ( max-width:800px ) {
+            width: 100px;
+        }
+
+        .logo__link {
+            color: white;
+            font-family: "NotoSansJP";
+            font-size: 1rem;
+            @media screen and ( max-width:800px ) {
+                font-size: 0.625rem;
+            }
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .menu {
+        display: none;
+        @media screen and ( max-width:800px ) {
+            align-items: center;
+            display: flex;
+            height: 50px;
+            justify-content: center;
+            margin-left: auto;
+            margin-right: 30px;
+            width: 50px;
+        }
+
+        .menu__icon {
+            @media screen and ( max-width:800px ) {
+                height: 60%;
+            }
+        }
+    }
+
+    .global {
+        height: 100%;
+        margin-left: auto;
+        margin-right: 30px;
+        @media screen and ( max-width:800px ) {
+            display: none;
+        }
+
+        .global__list {
+            display: flex;
+            gap: 20px;
+            height: 100%;
+            @media screen and ( max-width:800px ) {
+                flex-direction: column;
+                gap: unset;
+                width: 100%;
+            }
+        }
+
+        .global__item {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            @media screen and ( max-width:800px ) {
+                border: 1px solid gray;
+                height: 20%;
+                width: 100%;
+            }
+        }
+
+        .global__item--none {
+            display: none;
+            @media screen and ( max-width:800px ) {
+                display: flex;
+            }
+        }
+
+        .global__link {
+            color: white;
+            font-size: 1.2rem;
+            @media screen and ( max-width:800px ) {
+                font-size: 1.5rem;
+            }
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .global--open {
+        display: none;
+        @media screen and ( max-width:800px ) {
+            background: black;
+            display: block;
+            height: calc( 100svh - 20px );
+            position: absolute;
+            width: 100%;
+        }
+    }
+}
+
+.main {
+    height: calc( calc( 100svh - 70px ) * 5 );
+}
+
+.home {
+    height: calc( 100svh - 20px );
+    width: 100%;
+    padding-top: 50px;
+    margin-bottom: -50px;
+
+    .home__inner {
+        align-items: center;
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .home__title {
+        color: #00FF00;
+        font-size: 4.375rem;
+        @media screen and ( max-width:800px ) {
+            font-size: 2rem;
+        }
+    }
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    height: calc( 100svh - 20px );
+    width: 100%;
+    padding-top: 50px;
+    margin-bottom: -50px;
+
+    .about__title {
+        color: #00FF00;
+        font-size: 2rem;
+        text-align: center;
+        text-decoration: underline;
+        @media screen and ( max-width:800px ) {
+            font-size: 1.25rem;
+        }
+    }
+
+    .about__container {
+        border: 10px solid black;
+        display: flex;
+        width: fit-content;
+        justify-content: center;
+        height: calc( 100% - 36.79px );
+        flex-direction: column;
+        margin: auto;
+
+        .about__sentence {
+            color: white;
+            font-size: 1.25rem;
+            font-family: "NotoSansJP";
+            @media screen and ( max-width:800px ) {
+                font-size: 1rem;
+            }
+        }
+
+        .about__list {
+            margin-top: 20px;
+        }
+
+        .about__item {
+            color: white;
+            font-size: 1.25rem;
+            font-family: "NotoSansJP";
+            @media screen and ( max-width:800px ) {
+                font-size: 0.825rem;;
+            }
+        }
+    }
+}
+
+.result {
+    display: flex;
+    flex-direction: column;
+    height: calc( 100svh - 20px );
+    width: 100%;
+    padding-top: 50px;
+    margin-bottom: -50px;
+
+    .result__title {
+        color: #00FF00;
+        font-size: 2rem;
+        text-align: center;
+        text-decoration: underline;
+        font-family: "NotoSansJP";
+        @media screen and ( max-width:800px ) {
+            font-size: 1.25rem;
+        }
+    }
+
+    .result__container {
+        border: 10px solid black;
+        display: flex;
+        width: fit-content;
+        justify-content: center;
+        height: calc( 100% - 36.79px );
+        flex-direction: column;
+        margin: auto;
+
+        .result__year {
+            font-size: 1.25rem;
+            color: white;
+            margin-top: 20px;
+            margin-bottom: 5px;
+            font-family: "NotoSansJP";
+            &:first-child {
+                margin-top: unset;
+            }
+            @media screen and ( max-width:800px ) {
+                font-size: 0.825rem;;
+            }
+        }
+
+        .result__item {
+            color: white;
+            font-size: 1.25rem;
+            font-family: "NotoSansJP";
+            @media screen and ( max-width:800px ) {
+                font-size: 0.825rem;;
+            }
+        }
+    }
+}
+
+.event {
+    display: flex;
+    flex-direction: column;
+    height: calc( 100svh - 20px );
+    width: 100%;
+    padding-top: 50px;
+    margin-bottom: -50px;
+
+    .event__title {
+        color: #00FF00;
+        font-size: 2rem;
+        text-align: center;
+        text-decoration: underline;
+        font-family: "NotoSansJP";
+        @media screen and ( max-width:800px ) {
+            font-size: 1.25rem;
+        }
+    }
+
+    .event__container {
+        border: 10px solid black;
+        display: flex;
+        width: fit-content;
+        justify-content: center;
+        height: calc( 100% - 36.79px );
+        flex-direction: column;
+        margin: auto;
+
+        .event__item {
+            color: white;
+            font-size: 2rem;
+            font-family: "NotoSansJP";
+            @media screen and ( max-width:800px ) {
+                font-size: 1.25rem;
+            }
+        }
+    }
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    height: calc( 100svh - 20px );
+    width: 100%;
+    padding-top: 50px;
+    margin-bottom: -50px;
+
+    .contact__title {
+        color: #00FF00;
+        font-size: 2rem;
+        text-align: center;
+        text-decoration: underline;
+        font-family: "NotoSansJP";
+        @media screen and ( max-width:800px ) {
+            font-size: 1.25rem;
+        }
+    }
+
+    .contact__container {
+        border: 10px solid black;
+        display: flex;
+        width: fit-content;
+        justify-content: center;
+        height: calc( 100% - 36.79px );
+        flex-direction: column;
+        margin: auto;
+
+        .contact__item {
+            color: white;
+            font-size: 2rem;
+            font-family: "NotoSansJP";
+            margin-top: 10px;
+            &:first-child {
+                margin-top: unset;
+            }
+            @media screen and ( max-width:800px ) {
+                font-size: 1.25rem;
+            }
+
+            .contact__link:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.footer {
+    align-items: center;
+    background: black;
+    border-top: 1px white solid;
+    bottom: 0;
+    display: flex;
+    height: 20px;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+
+    .copyright {
+        color: white;
+        font-size: 0.625rem;
+    }
+}
